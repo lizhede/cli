@@ -191,8 +191,6 @@ func (c Command) Run(ctx *Context) (err error) {
 	if c.Before != nil {
 		err = c.Before(context)
 		if err != nil {
-			fmt.Fprintln(ctx.App.Writer, err)
-			fmt.Fprintln(ctx.App.Writer)
 			ShowCommandHelp(ctx, c.Name)
 			HandleExitCoder(err)
 			return err
