@@ -39,7 +39,7 @@ type ErrorFormatter interface {
 }
 
 // ExitCoder is the interface checked by `App` and `Command` for a custom exit
-// code
+// code 
 type ExitCoder interface {
 	error
 	ExitCode() int
